@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.mvvmarchitectureabbtech.ui.main.viewmodel.UserViewModel" />
+
+        <variable
+            name="util"
+            type="com.example.mvvmarchitectureabbtech.ui.util.UtilsKt" />
+
+        <import type="android.view.View" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainBlank"
+        tools:context=".ui.fragments.BlankFragment">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{viewModel.getUserById().name}"
+            android:textSize="21sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/userSurName"
+            paddingLeft="@{viewModel.surName}"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:onClick="@{()->viewModel.getAllUserFromDB()}"
+            android:text="@{viewModel.getUserById().surname}"
+            android:visibility="@{viewModel.name.isEmpty() ? View.GONE : View.VISIBLE}"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/customView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:profile_surname_label_visible="true" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
