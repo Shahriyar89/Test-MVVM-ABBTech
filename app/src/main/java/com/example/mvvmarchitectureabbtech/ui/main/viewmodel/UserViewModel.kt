@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.data.model.NewsResponse
 import com.example.data.model.User
-import com.example.data.repository.local.LocalRepository
 import com.example.data.repository.remote.NewsRepository
 import com.example.domein.usecases.news.NewsRepositoryUseCase
 import com.example.domein.usecases.room.AddUserUseCase
