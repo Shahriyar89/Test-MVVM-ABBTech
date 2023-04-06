@@ -1,25 +1,21 @@
 package com.example.mvvmarchitectureabbtech.ui.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.Toast
 import androidx.core.os.bundleOf
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.data.model.User
 import com.example.mvvmarchitectureabbtech.R
-import com.example.mvvmarchitectureabbtech.data.model.User
-import com.example.mvvmarchitectureabbtech.databinding.FragmentBlankBinding
 import com.example.mvvmarchitectureabbtech.databinding.FragmentUsersBinding
 import com.example.mvvmarchitectureabbtech.ui.adapter.OnClickElementListener
 import com.example.mvvmarchitectureabbtech.ui.adapter.UsersRecyclerAdapter
 import com.example.mvvmarchitectureabbtech.ui.main.viewmodel.UserViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class UsersFragment : Fragment() {
@@ -32,7 +28,7 @@ class UsersFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentUsersBinding.inflate(inflater, container, false)
         binding.viewModel = viewModel
@@ -67,8 +63,7 @@ class UsersFragment : Fragment() {
         })
 
 
-        Toast.makeText(requireContext(), viewModel.getUserById().toString(), Toast.LENGTH_SHORT)
-            .show()
+//        Toast.makeText(requireContext(), viewModel.getUserById().toString(), Toast.LENGTH_SHORT).show()
     }
 
     override fun onDestroy() {

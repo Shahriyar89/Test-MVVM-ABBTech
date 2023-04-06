@@ -3,7 +3,7 @@ package com.example.mvvmarchitectureabbtech.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mvvmarchitectureabbtech.data.model.User
+import com.example.data.model.User
 import com.example.mvvmarchitectureabbtech.databinding.ItemRowBinding
 
 class UsersRecyclerAdapter(val list: List<User>) :

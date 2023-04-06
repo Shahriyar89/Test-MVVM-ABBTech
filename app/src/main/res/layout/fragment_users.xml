@@ -11,7 +11,7 @@
 
         <variable
             name="article"
-            type="com.example.mvvmarchitectureabbtech.data.model.Article" />
+            type="com.example.data.model.Article" />
 
     </data>
 

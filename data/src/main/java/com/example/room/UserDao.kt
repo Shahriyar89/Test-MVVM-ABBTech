@@ -1,7 +1,7 @@
-package com.example.mvvmarchitectureabbtech.local
+package com.example.room
 
 import androidx.room.*
-import com.example.mvvmarchitectureabbtech.data.model.User
+import com.example.data.model.User
 
 
 @Dao

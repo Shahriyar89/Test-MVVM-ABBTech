@@ -1,7 +1,7 @@
 package com.example.mvvmarchitectureabbtech.ui.adapter
 
-import com.example.mvvmarchitectureabbtech.data.model.User
+import com.example.data.model.User
 
 interface OnClickElementListener {
-    fun onClickListener(user:User)
+    fun onClickListener(user: User)
 }

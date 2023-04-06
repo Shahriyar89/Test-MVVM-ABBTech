@@ -1,13 +1,8 @@
-package com.example.mvvmarchitectureabbtech.local
+package com.example.room
 
-import android.content.Context
 import androidx.room.Database
-import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.migration.Migration
-import androidx.sqlite.db.SupportSQLiteDatabase
-import com.example.mvvmarchitectureabbtech.data.model.Customer
-import com.example.mvvmarchitectureabbtech.data.model.User
+import com.example.data.model.User
 
 
 @Database(entities = [User::class] , version = 1)

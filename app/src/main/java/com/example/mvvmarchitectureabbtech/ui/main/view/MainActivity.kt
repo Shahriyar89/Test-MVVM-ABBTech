@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mvvmarchitectureabbtech.data.model.User
+import com.example.data.model.User
 import com.example.mvvmarchitectureabbtech.databinding.ActivityMainBinding
 import com.example.mvvmarchitectureabbtech.ui.main.viewmodel.UserViewModel
 import dagger.hilt.android.AndroidEntryPoint
